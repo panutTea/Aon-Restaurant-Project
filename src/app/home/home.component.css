@@ -5,6 +5,10 @@ nav {
   border: 1px solid gray;
   background-color: green;
 }
+.header {
+  display: flex;
+  justify-content: center;
+}
 .Box {
   display: flex;
 }
@@ -17,29 +21,20 @@ nav {
   /* background-color: yellow; */
 }
 .food {
-  justify-content: center;
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
   align-items: center;
   border: 2px solid rgb(236, 187, 114);
   background-color: rgba(162, 212, 207, 0.5);
 }
-.order {
-  display: flex;
-  width: 50%;
-  flex-direction: column;
-  background-color: orange;
-}
 
-/* .friedRice {
-  display: flex;
-  justify-content: center;
-} */
-.list {
-  display: flex;
-  grid-template-columns: auto auto;
-  height: 600px;
-  width: 100%;
-  background-color: yellow;
+input[type="text"] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
