@@ -18,6 +18,8 @@ export class LoginComponent implements OnInit {
   checkID() {
     if (this.form.value.id == "chef") {
       this.router.navigate(["chef-list"]);
+    } else if (this.form.value.id == "cashier") {
+      this.router.navigate(["cashier"]);
     } else {
       alert("not this one!!");
     }

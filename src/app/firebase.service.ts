@@ -9,10 +9,25 @@ export class FirebaseService {
 
   getFoods() {
     let DocRef = this.firestore.collection<Food>("food", e =>
-      e.orderBy("price", "desc")
+      e.where("stat", "==", "false")
     );
     return DocRef.valueChanges();
   }
+
+  getFoodsCashier() {
+    let DocRef = this.firestore.collection<Food>("food", e =>
+      e.where("stat", "==", "true")
+    );
+    return DocRef.valueChanges();
+  }
+
+  deleteFood(id: string) {
+    return this.firestore
+      .collection("food")
+      .doc(id)
+      .delete();
+  }
+
   addFood() {
     let food = {
       name: ["dsadsa" + "dsadsa"],
@@ -30,6 +45,15 @@ export class FirebaseService {
         // The document probably doesn't exist.
         console.error("Error updating document: ", error);
       });
+  }
+  updateStat(id: string) {
+    let finish = {
+      stat: "true"
+    };
+    const ref = this.firestore
+      .collection("food")
+      .doc(id)
+      .update(finish);
   }
   //   addTweet(n: string, message: string) {
   //     let food = {

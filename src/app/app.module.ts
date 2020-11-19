@@ -18,7 +18,7 @@ import { HomeComponent } from "./home/home.component";
 import { FirebaseService } from "./firebase.service";
 import { LoginComponent } from "./login/login.component";
 import { ChefListComponent } from "./chef-list/chef-list.component";
-
+import { CashierComponent } from "./cashier/cashier.component";
 // service
 
 @NgModule({
@@ -29,7 +29,9 @@ import { ChefListComponent } from "./chef-list/chef-list.component";
     RouterModule.forRoot([
       { path: "", component: HomeComponent },
       { path: "login", component: LoginComponent },
-      { path: "chef-list", component: ChefListComponent }
+      { path: "chef-list", component: ChefListComponent },
+      { path: "cashier", component: CashierComponent }
+      // { path: "cashier", component: CashierComponent }
     ]),
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
@@ -38,7 +40,8 @@ import { ChefListComponent } from "./chef-list/chef-list.component";
     HelloComponent,
     HomeComponent,
     LoginComponent,
-    ChefListComponent
+    ChefListComponent,
+    CashierComponent
   ],
   bootstrap: [AppComponent],
   providers: [FirebaseService]

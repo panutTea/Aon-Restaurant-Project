@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-  onDish() {
-    this.form.value.ingredients;
-  }
+  // onDish() {
+  //   this.form.value.ingredients;
+  // }
 }

@@ -4,13 +4,57 @@
   </div>
 </div>
 
-<div class = "colbig">
+<!-- <div class = "colbig">
 
   <div class="name col">ชื่อ</div>
   <div class="amount col">จำนวนจาน</div>
   <div class="topping col">topping</div>
   <div class="หมายเหตุ col">หมายเหตุ</div>
   <div class="status col">สถานะ</div>
+</div> -->
+<!-- 
+<!-- <table>
+  <tr>
+    <td>ชื่อ</td>
+    <td>จำนวนจาน</td>
+    <td>topping</td>
+    <!-- <td>หมายเหตุ</td>
+    <td>สถานะ</td>    
+  </tr>
 
 
+  <!-- <tr>
+    <td>1</td>
+    <td>2</td>
+  </tr> 
+    
+</table> - -->
+ 
+
+<div  >
+  <div  >
+   <table>
+    <tr>
+      <td>ชื่อ</td>
+      <td>จำนวนจาน</td>
+      <td>topping</td>
+      <td>หมายเหตุ</td>
+      <td>สถานะ</td>
+
+  <!-- <td>หมายเหตุ</td>
+  <td>สถานะ</td>       -->
+    </tr>
+
+    <tr *ngFor = "let Foods of Foods">
+      <td>{{ Foods.name }}</td>
+      <td>{{ Foods.number }}</td> 
+      <td>{{ Foods.topping }}</td> 
+      <td>{{ Foods.maihate }}</td>      
+      <!-- <td>{{ Foods.price }}</td> -->
+      <td><button  (click) = "finish(Foods.id)">เสร็จเเล้ว</button></td>
+    </tr>
+    <!-- <div>{{ Foods.name }}   {{ Foods.topping }} {{ Foods.table }}{{ Foods.price }}  <button>x</button> </div> -->
+
+   </table>
 </div>
+

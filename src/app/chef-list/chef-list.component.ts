@@ -11,7 +11,17 @@ import { Router } from "@angular/router";
   styleUrls: ["./chef-list.component.css"]
 })
 export class ChefListComponent implements OnInit {
-  constructor() {}
+  Foods : Food[];
+  constructor( private firebaseService:
+  FirebaseService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.firebaseService.getFoods().subscribe
+    (val => {this.Foods = val;});
+  }
+  finish(id: string){
+    if (window.confirm("confirm")) {
+      this.firebaseService.updateStat(id)
+    }
+  }
 }
