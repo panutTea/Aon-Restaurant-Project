@@ -28,23 +28,22 @@ export class FirebaseService {
       .delete();
   }
 
-  addFood() {
+  addFood(n: string, p: number, num: number, m: string,t: number) {
     let food = {
-      name: ["dsadsa" + "dsadsa"],
-      price: [200],
-      topping: ["none"]
+      price: p,
+      number: num,
+      maihate: m,
+      table: t,
+      stat: "false"
     };
-    const ref = this.firestore
-      .collection("food")
-      .doc("table1")
-      .update(food)
-      .then(function() {
-        console.log("Document successfully updated!");
-      })
-      .catch(function(error) {
-        // The document probably doesn't exist.
-        console.error("Error updating document: ", error);
-      });
+    const ref = this.firestore.collection("food").add(food);
+    ref.then(newRef => {
+      const upDateID = {
+        id: newRef.id
+      };
+      newRef.update(upDateID);
+    });
+    return ref;
   }
   updateStat(id: string) {
     let finish = {

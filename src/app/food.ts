@@ -1,8 +1,7 @@
 export class Food {
   name: string;
   price: number;
-  topping: string;
-  table: string;
+  table: number;
   number: number;
   maihate: string;
   stat: string;
