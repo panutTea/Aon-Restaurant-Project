@@ -28,8 +28,9 @@ export class FirebaseService {
       .delete();
   }
 
-  addFood(n: string, p: number, num: number, m: string,t: number) {
+  addFood(n: string, p: number, num: number, m: string, t: number) {
     let food = {
+      name: n,
       price: p,
       number: num,
       maihate: m,

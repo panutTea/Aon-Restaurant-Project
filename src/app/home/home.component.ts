@@ -19,9 +19,9 @@ export class HomeComponent implements OnInit {
   constructor(private firebaseService: FirebaseService) {}
 
   ngOnInit() {}
-  onDish() {
+  onDish(name: string) {
     this.firebaseService.addFood(
-      this.form.value.name,
+      name,
       this.form.value.price,
       this.form.value.number,
       this.form.value.maihate,
