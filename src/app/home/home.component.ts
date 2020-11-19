@@ -9,11 +9,13 @@ import { FirebaseService } from "../firebase.service";
 })
 export class HomeComponent implements OnInit {
   form = new FormGroup({
+    table: new FormControl(""),
     name: new FormControl(""),
     price: new FormControl(""),
     number: new FormControl(""),
     maihate: new FormControl("")
   });
+
   constructor(private firebaseService: FirebaseService) {}
 
   ngOnInit() {}
